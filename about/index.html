@@ -1,0 +1,15 @@
+---
+layout: default
+title: about dohodathi
+---
+
+
+<h2>{{ page.title }}</h2>
+
+{% for memberarray in site.data.members %} 
+{% assign member = memberarray[1] %}
+  <h3>{{ member.name }}</h3>
+  <ul>
+    <a href="https://github.com/{{ member.github }}">{{ member.name }}</a>
+  </ul>
+{% endfor %}
