@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<post>
+        <h2>{{ page.title }}</h2>
+
+        <div class="post_content">{{ content }}</div>
+
+        <postfooter>
+            <span><i class="fa fa-clock"></i><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span><br/>
+            <span class="category"><i class="fa fa-tag"></i> {{ page.categories | category_links }}</span><br/>
+            <span class="authors"><i class="fa fa-user"></i> {% if site.data.members contains page.author %}<a href="/about">{{page.author}}</a>{% else %}{{page.author}}{% endif %}</span>
+        </postfooter>
+</post>

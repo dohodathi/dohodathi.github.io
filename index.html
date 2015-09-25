@@ -3,8 +3,8 @@ title: Index
 layout: default
 ---
 
-<h2>Inhalt</h2>
+<h2>Our content</h2>
 
             {% for post in site.posts %}
-                <span>{{ post.date | date_to_string }}</span> -- <a href="{{ post.url }}">{{ post.title }}</a>
+                <span>{{ post.date | date_to_string }}</span> <i class="fa fa-hand-o-right"></i> <a href="{{ post.url }}">{{ post.title }}</a>
             {% endfor %}
